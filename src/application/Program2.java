@@ -36,7 +36,12 @@ public class Program2 {
         department.setName("Foods");
         departmentDao.update(department);
         System.out.println("Department Updated!");
-        
+
+        System.out.println("\n==== TEST 5: Department delete ====");
+        System.out.print("Digite o código do departamento que deseja excluir: ");
+        int id = sc.nextInt();
+        departmentDao.deleteById(id);
+        System.out.println("Departamento deletado com sucesso!");
 
         sc.close();
     }
